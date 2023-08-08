@@ -1,0 +1,21 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.5",
+        "vite": "^4.0.0",
+        "webpack": "^5.88.2"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.1",
+        "jquery": "^3.7.0",
+        "lodash": "^4.17.21",
+        "my-react": "npm:react@^18.2.0",
+        "sweetalert2": "^11.7.20"
+    }
+}
