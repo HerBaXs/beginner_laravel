@@ -13,7 +13,7 @@ class UserController extends Controller
 
     public function updateAll(Request $request)
     {
-        dd($request->all());asdasdasd
+        dd($request->all());
     }
 
     public function users(Request $request)
