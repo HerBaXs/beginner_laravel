@@ -10,12 +10,22 @@
 </head>
 <body>
 
-<ul>
-    <li><a href="">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="{{ route("contact") }}">Contact</a></li>
-    <li><a href="#about">About</a></li>
-</ul>
+@extends("layouts.front")
+@section("css")
+@endsection
+
+@section("content")
+
+    <h1>Hello World</h1>
+    <hr>
+    <h2>Welcome To Web Dizayn</h2>
+    <hr>
+
+@endsection
+
+@section("js")
+@endsection
+
 
 </body>
 </html>

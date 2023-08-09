@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SupportFormController;
@@ -31,10 +32,42 @@ Route::get("/user/{id}/{name?}", [HomeController::class, 'user'])
 
 Route::get('/support_form', [SupportFormController::class, 'support_form'])->name('support_form');
 
-Route::patch("/users", [UserController::class, 'update'])->name("user.update");
+Route::patch("/users/{id}/guncelle", [UserController::class, 'update'])->name("user.update");
 //Patch => Kullanicinin sadece bir bilaisi guncellenmek istemiyorsa kullanilir. Ornegin yalnizca email.
 
 //Put => Kullanicinin tum bilgilerini guncelliye biliriz.
-Route::put("/users/{id}/tumunuguncelle", [UserController::class, 'updateAll'])->name("user.updateAll");
+Route::put("/users/{id}/tumunu-guncelle", [UserController::class, 'updateAll'])->name("user.updateAll");
+
+
+Route::any("hersey", function(Request $request){
+   dd("hersey geldi");
+});
+
+Route::resource("article", "ArticleController");
+Route::apiResource("/api/article", "Api/ArticleController");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
