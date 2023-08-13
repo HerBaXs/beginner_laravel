@@ -8,6 +8,7 @@
     <hr>
     Icerik alani
     <hr>
+
 @endsection
 
 @section("js")

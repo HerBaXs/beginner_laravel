@@ -8,7 +8,16 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view("index");
+        $age = 10;
+
+        $person = new \stdClass();
+        $person->age = $age;
+//        return view("index", ['age' => $age]);
+//        return view('index', compact('age'));
+//        return view('index', compact('age'))->with('age', $age);
+//        return view('index')->with('age', $age)->with('sercan', 'Recep');
+//        return view('index')->with(['age' => $age, 'sercan' => 'Recep']);
+        return view('index', compact("person"));
     }
 
     public function about()
