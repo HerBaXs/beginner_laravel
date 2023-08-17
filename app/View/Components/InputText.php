@@ -8,19 +8,22 @@ use Illuminate\View\Component;
 
 class InputText extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+
+    public const TYPES = ['text', 'checkbox', 'submit'];
+
+    public function __construct(public string $type, public string $placeholder)
+ // public function __construct(string $type) public yazilmadigi zaman type cagirmag lazimdi function icinde!!!
     {
-        //
+        // $this->type = $type  // public olmadigi zaman bele cagiririg
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
-        return view('components.input-text');
+        if(in_array($this->type, self::TYPES))
+        {
+            return view('components.input-text');
+        }
+        return "";
     }
+
 }

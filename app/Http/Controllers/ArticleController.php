@@ -19,7 +19,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        dd("create makale olusturma form");
+        return view("admin.article.create");
     }
 
     /**

@@ -63,6 +63,7 @@ Route::middleware('auth:api')->get('/user/{role}', [UserController::class, 'role
     ->whereIn('role', ['admin', 'user']);
 
 Route::prefix('admin')->group(function (){
+    Route::get('/create-article', [ArticleController::class, 'create'])->name('admin.create');
     Route::get('/edit-article', [ArticleController::class, 'edit'])->name('admin.articleEdit');
     Route::get('/article/{id}/delete', [ArticleController::class, 'destroy'])->name('admin.articleDestroy');
 });
